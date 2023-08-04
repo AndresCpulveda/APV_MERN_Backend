@@ -9,6 +9,7 @@ import cors from "cors";
 const app = express(); //En una variable llamamos el metodo de express
 app.use(express.json()) //Permite decirle a express que vamos a enviar y recibir informacio de tipo json mediante el servidor
 conectarDB(); //Ejecutamos la funcion para conectar la DB
+
 const dominiosPermitidos = [process.env.FRONTEND_URL]
 //Creamos una autorizacion de cors para interactuar entre en fronend desde una ip y el backend desde un ip diferente (ver vid 465)
 const corsOptions = {
@@ -22,7 +23,8 @@ const corsOptions = {
   }
 }
 
-app.use(cors(corsOptions))////Permite que la app use los metodos http en cors
+// app.use(cors(corsOptions))////Permite que la app use los metodos http en cors
+app.use(cors())////Permite que la app use los metodos http en cors
 
 app.use("/api/veterinarios", routerVeterinario) //Permite que la app use los metodos http en la direccion /api/veterinarios y su router esta definido como routerVeterinario
 app.use("/api/pacientes", routerPacientes) //Permite que la app use los metodos http en la direccion /api/pacientes y su router esta definido como routerVeterinario
