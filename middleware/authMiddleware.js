@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken"; //Importamos la dependcia de json web token para poder verificarlo
-import Veterinario from "../models/veterinario.js"; //Importamos el modelo para consultar el veterinario en la DB
+import Veterinario from "../models/Veterinario.js"; //Importamos el modelo para consultar el veterinario en la DB
 
 const checkAuth = async (req, res, next) => { //Middleware que revisa que el jwt enviado como authorization sea valido
   let token;
