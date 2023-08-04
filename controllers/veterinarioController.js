@@ -1,4 +1,4 @@
-import Veterinario from "../models/veterinario.js"; //Importamos el modelo de la DB de veterinarios
+import Veterinario from "../models/Veterinario.js"; //Importamos el modelo de la DB de veterinarios
 import generarJWT from "../helpers/generarJWT.js"; //Importamos la funcion generadora del json web token
 import generarId from "../helpers/generarId.js"; //Importamos la funcion generadora del id
 import emailRegistro from "../helpers/emailRegistro.js";//Importamos la funcion que envia el email para confirmar la cuenta
