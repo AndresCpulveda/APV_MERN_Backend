@@ -3,7 +3,6 @@ import dotenv from "dotenv/config" //Importamos esta dependencia añadiendo el "
 import conectarDB from "./config/db.js"; //Importamos la funcion que conecta la app con la DB
 import routerVeterinario from './routes/veterinarioRoutes.js' //Importamos el router de veterinarios
 import routerPacientes from './routes/pacientesRoutes.js' //Importamos el router de pacientes
-import Veterinario from "./models/veterinario.js";
 import cors from "cors";
 
 const app = express(); //En una variable llamamos el metodo de express
